@@ -24,4 +24,11 @@ describe('about closures', () => {
         })();
         expect(a.to.equal(_));
     });
+
+    it('4-closures are functions', () => {
+        (function (arg) {
+            arg.item = "item"
+        })(window);
+        expect(item.to.equal(_))
+    });
 });

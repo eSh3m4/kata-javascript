@@ -24,6 +24,7 @@ describe('about this', () => {
         function myFunction() {
             this.value = "b";
         }
+        
         myFunction();
 
         expect(this.value.to.equal(_));
@@ -33,6 +34,7 @@ describe('about this', () => {
         function myClass() {
             this.value = "a";
         }
+
         var myObject = new myClass();
         expect(myObject.value.to.equal(_));
     });
@@ -42,6 +44,7 @@ describe('about this', () => {
         function myClass() {
             this.value = "b";
         }
+
         var myObject = new myClass();
 
         expect(myObject.value.to.equal(_));
@@ -51,11 +54,12 @@ describe('about this', () => {
     it('6-function context', () => {
         this.value = "a";
         function myClass() {
-            this.value = "a";
+            this.value = "b";
             this.setValue = function () {
-                this.value = "b";
+                this.value = "c";
             }
         }
+
         var myObject = new myClass();
         myObject.setValue();
 
@@ -66,11 +70,12 @@ describe('about this', () => {
     it('7-timeout context', () => {
         this.value = "a";
         function myClass() {
-            this.value = "a";
+            this.value = "b";
             this.setValue = function () {
-                this.value = "b";
+                this.value = "c";
             }
         }
+
         var myObject = new myClass();
         setTimeout(myObject.setValue);
 
@@ -81,11 +86,12 @@ describe('about this', () => {
     it('8-timeout context bis', () => {
         this.value = "a";
         function myClass() {
-            this.value = "a";
+            this.value = "b";
             this.setValue = function () {
-                this.value = "b";
+                this.value = "c";
             }
         }
+
         var myObject = new myClass();
         setTimeout(function () { myObject.setValue(); });
 
@@ -96,11 +102,12 @@ describe('about this', () => {
     it('9-bind context', () => {
         this.value = "a";
         function myClass() {
-            this.value = "a";
+            this.value = "b";
             this.setValue = function () {
-                this.value = "b";
+                this.value = "c";
             }
         }
+
         var myObject = new myClass();
         myObject.setValue().bind(this);
 
@@ -120,6 +127,7 @@ describe('about this', () => {
 
         var myObject1 = new myClass();
         var myObject2 = new myClass();
+
         myObject2.setValue("c");
         myObject1.setValue.apply(this, ["d", "e"]);
         myObject2.setValue.call(myObject1, "f");
