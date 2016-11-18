@@ -36,6 +36,7 @@ describe('about this', () => {
         }
 
         var myObject = new myClass();
+
         expect(myObject.value).to.equal(_);
     });
 
@@ -67,22 +68,6 @@ describe('about this', () => {
         expect(this.value).to.equal(_);
     });
 
-    it('7-timeout context', () => {
-        this.value = "a";
-        function myClass() {
-            this.value = "b";
-            this.setValue = function () {
-                this.value = "c";
-            }
-        }
-
-        var myObject = new myClass();
-        setTimeout(myObject.setValue);
-
-        expect(myObject.value).to.equal(_);
-        expect(this.value).to.equal(_);
-    });
-
     it('8-timeout context bis', () => {
         this.value = "a";
         function myClass() {
@@ -109,7 +94,7 @@ describe('about this', () => {
         }
 
         var myObject = new myClass();
-        myObject.setValue().bind(this);
+        myObject.setValue.bind(this)();
 
         expect(myObject.value).to.equal(_);
         expect(this.value).to.equal(_);

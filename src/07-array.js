@@ -35,23 +35,23 @@ describe('about array', () => {
         expect(array).to.eql(["a", "c"]);
         expect(array).to.equal(expectedArray);
     });
-    
-    it("5-you can apply function on each element", () => {
-        var array = [1, 2, 3];
-        function multiply(e) { return e * 2 };
-        
-        array._(multiply);
-        
-        expect(array).to.eql([2,4,6]);
-    });
 
-    it("6-you can iterate on elements", () => {
+    it("5-you can iterate on elements", () => {
         var array =  [1, 2, 3];  
         var sum = 0;
 
         array._;
         
         expect(sum).to.equal(6);
+    });
+    
+    it("6-you can apply function on each element to create new array", () => {
+        var array = [1, 2, 3];
+        function multiply(e) { return e * 2 };
+        
+        var newArray = array._(multiply);
+        
+        expect(newArray).to.eql([2,4,6]);
     });
     
     it("7-you can sort elements", () => {

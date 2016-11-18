@@ -23,7 +23,7 @@ describe('about string', () => {
 
     it('4-it can be concatenated using method', () => {
         var value = "";
-        value._(_, _, _);
+        value = value._(_, _, _);
 
         expect(value).to.equal("hello world");
     });
@@ -56,17 +56,24 @@ describe('about string', () => {
         var value = "hello world";
         var newValue = value._;
 
+        expect(newValue).to.equal("hell0 world");
+    });
+
+    it('10-can be totally replaced', () => {
+        var value = "hello world";
+        var newValue = value.replace(_);
+
         expect(newValue).to.equal("hell0 w0rld");
     });
 
-    it('10-can be splitted', () => {
+    it('11-can be splitted', () => {
         var value = "hello world";
         var newValue = value._;
 
         expect(newValue).to.eql(["hell", " w", "rld"]);
     });
 
-    it('11-can be instanciated on multiple lines', () => {
+    it('12-can be instanciated on multiple lines', () => {
         /*
         the next syntax is forbidden:
             var value = "hello"+
