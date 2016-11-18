@@ -9,6 +9,8 @@ describe('about basic types', () => {
   it('2-you should know what type of strings is', () => {
     expect('A').to.be.a( _ );
     expect("a string").to.be.a( _ );
+    expect(String("a string")).to.be.a( _ );
+    expect(new String("a string")).to.be.a( _ );
   });
 
   it('3-you should know what type of numbers is', () => {

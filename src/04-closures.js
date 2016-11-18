@@ -6,7 +6,7 @@ describe('about closures', () => {
         (function () {
             var a = "a";
         })();
-        expect(a.to.equal(_));
+        expect(a).to.equal(_);
     });
 
     it('2-outer variable scope', () => {
@@ -14,7 +14,7 @@ describe('about closures', () => {
         (function () {
             var a = "b";
         })();
-        expect(a.to.equal(_));
+        expect(a).to.equal(_);
     });
 
     it('3-outer variable scope bis', () => {
@@ -22,13 +22,13 @@ describe('about closures', () => {
         (function () {
             a = "b";
         })();
-        expect(a.to.equal(_));
+        expect(a).to.equal(_);
     });
 
     it('4-closures are functions', () => {
         (function (arg) {
             arg.item = "item"
         })(window);
-        expect(item.to.equal(_))
+        expect(item).to.equal(_);
     });
 });

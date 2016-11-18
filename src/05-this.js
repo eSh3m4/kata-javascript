@@ -7,7 +7,7 @@ describe('about this', () => {
             return this;
         }
 
-        expect(myFunction().to.equal(_));
+        expect(myFunction()).to.equal(_);
     });
 
     it('2-is in strict mode', () => {
@@ -16,7 +16,7 @@ describe('about this', () => {
             return this;
         }
 
-        expect(myFunction().to.equal(_));
+        expect(myFunction()).to.equal(_);
     });
 
     it('3-function context', () => {
@@ -24,10 +24,10 @@ describe('about this', () => {
         function myFunction() {
             this.value = "b";
         }
-        
+
         myFunction();
 
-        expect(this.value.to.equal(_));
+        expect(this.value).to.equal(_);
     });
 
     it('4-object context', () => {
@@ -36,7 +36,7 @@ describe('about this', () => {
         }
 
         var myObject = new myClass();
-        expect(myObject.value.to.equal(_));
+        expect(myObject.value).to.equal(_);
     });
 
     it('5-current context', () => {
@@ -47,8 +47,8 @@ describe('about this', () => {
 
         var myObject = new myClass();
 
-        expect(myObject.value.to.equal(_));
-        expect(this.value.to.equal(_));
+        expect(myObject.value).to.equal(_);
+        expect(this.value).to.equal(_);
     });
 
     it('6-function context', () => {
@@ -63,8 +63,8 @@ describe('about this', () => {
         var myObject = new myClass();
         myObject.setValue();
 
-        expect(myObject.value.to.equal(_));
-        expect(this.value.to.equal(_));
+        expect(myObject.value).to.equal(_);
+        expect(this.value).to.equal(_);
     });
 
     it('7-timeout context', () => {
@@ -79,8 +79,8 @@ describe('about this', () => {
         var myObject = new myClass();
         setTimeout(myObject.setValue);
 
-        expect(myObject.value.to.equal(_));
-        expect(this.value.to.equal(_));
+        expect(myObject.value).to.equal(_);
+        expect(this.value).to.equal(_);
     });
 
     it('8-timeout context bis', () => {
@@ -95,8 +95,8 @@ describe('about this', () => {
         var myObject = new myClass();
         setTimeout(function () { myObject.setValue(); });
 
-        expect(myObject.value.to.equal(_));
-        expect(this.value.to.equal(_));
+        expect(myObject.value).to.equal(_);
+        expect(this.value).to.equal(_);
     });
 
     it('9-bind context', () => {
@@ -111,8 +111,8 @@ describe('about this', () => {
         var myObject = new myClass();
         myObject.setValue().bind(this);
 
-        expect(myObject.value.to.equal(_));
-        expect(this.value.to.equal(_));
+        expect(myObject.value).to.equal(_);
+        expect(this.value).to.equal(_);
     });
 
     it('10-invoke function with context', () => {
@@ -132,8 +132,8 @@ describe('about this', () => {
         myObject1.setValue.apply(this, ["d", "e"]);
         myObject2.setValue.call(myObject1, "f");
 
-        expect(this.value.to.equal(_));
-        expect(myObject1.value.to.equal(_));
-        expect(myObject2.value.to.equal(_));
+        expect(this.value).to.equal(_);
+        expect(myObject1.value).to.equal(_);
+        expect(myObject2.value).to.equal(_);
     });
 });
