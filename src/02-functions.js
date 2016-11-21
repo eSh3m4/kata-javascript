@@ -1,3 +1,11 @@
+/*
+  You can find all the answers on the MDN:
+  https://developer.mozilla.org/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript#Les_fonctions
+  https://developer.mozilla.org/docs/Web/JavaScript/Guide/Fonctions
+  https://developer.mozilla.org/docs/Web/JavaScript/Reference/Objets_globaux/Function/call
+  https://developer.mozilla.org/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply
+*/
+
 var chai = require('chai');
 var expect = chai.expect;
 
@@ -20,7 +28,7 @@ describe('about functions', () => {
     function helloWorld(arg1, arg2) {
       return `${arg1} ${arg2}`;
     }
-    expect(helloWorld(_,_)).to.equal("hello world");
+    expect(helloWorld(_, _)).to.equal("hello world");
   });
 
   it('4-can be called with less arguments than expected', () => {
@@ -59,23 +67,23 @@ describe('about functions', () => {
 
     expect(a).to.equal("a");
   });
-  
+
   it('9-can be invoked with call', () => {
     function helloWorld(arg) {
       return arg;
     }
 
-    var result = helloWorld.call(_,_)
+    var result = helloWorld.call(_, _)
 
     expect(result).to.equal("a");
   });
-  
+
   it('10-can be invoked with apply', () => {
     function helloWorld(arg1, arg2) {
-      return arg1+arg2;
+      return arg1 + arg2;
     }
 
-    var result = helloWorld.apply(_,_)
+    var result = helloWorld.apply(_, _)
 
     expect(result).to.equal("hello world");
   });
