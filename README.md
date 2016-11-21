@@ -7,7 +7,7 @@
  - Launch unit tests `npm test -- -w`
 
 ## Learn
-If you never touched Javascript, you should start by read this document:
+If you never touched Javascript, you should start by reading this document:
 https://developer.mozilla.org/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript
 
 
