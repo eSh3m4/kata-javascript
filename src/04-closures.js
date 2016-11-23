@@ -7,7 +7,7 @@ var chai = require('chai');
 var expect = chai.expect;
 
 describe('about closures', () => {
-    it('2- inner variable scope', () => {
+    it('1-inner variable scope', () => {
         var a = "a";
         (function () {
             var a = "b";
@@ -16,7 +16,7 @@ describe('about closures', () => {
         expect(a).to.equal(_);
     });
 
-    it('3-outer variable scope', () => {
+    it('2-outer variable scope', () => {
         var a = "a";
         (function () {
             a = "b";
@@ -25,7 +25,7 @@ describe('about closures', () => {
         expect(a).to.equal(_);
     });
 
-    it('4-closures are functions', () => {
+    it('3-closures are functions', () => {
         (function (arg) {
             arg.item = "item"
         })(this);

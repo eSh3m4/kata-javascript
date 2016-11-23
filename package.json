@@ -2,7 +2,14 @@
   "name": "kata-javascript",
   "version": "1.0.0",
   "scripts": {
-    "test": "mocha src --recursive"
+    "test": "mocha src",
+    "test:types": "mocha src/01*.js",
+    "test:functions": "mocha src/02*.js",
+    "test:classes": "mocha src/03*.js",
+    "test:closures": "mocha src/04*.js",
+    "test:this": "mocha src/05*.js",
+    "test:string": "mocha src/06*.js",
+    "test:array": "mocha src/07*.js"
   },
   "keywords": [],
   "author": "darkein",

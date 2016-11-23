@@ -73,7 +73,7 @@ describe('about this', () => {
         expect(this.value).to.equal(_);
     });
 
-    it('8-timeout context bis', () => {
+    it('7-timeout context', () => {
         this.value = "a";
         function myClass() {
             this.value = "b";
@@ -89,7 +89,7 @@ describe('about this', () => {
         expect(this.value).to.equal(_);
     });
 
-    it('9-bind context', () => {
+    it('8-bind context', () => {
         this.value = "a";
         function myClass() {
             this.value = "b";
@@ -105,7 +105,7 @@ describe('about this', () => {
         expect(this.value).to.equal(_);
     });
 
-    it('10-invoke function with context', () => {
+    it('9-invoke function with context', () => {
         this.value = "a";
 
         function myClass() {
