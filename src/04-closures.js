@@ -51,7 +51,7 @@ describe('about closures', () => {
         }, 10)
     });
 
-    it('4-works with loops bis', function (done) {
+    it('5-works with loops bis', function (done) {
         var results = [];
 
         function addResult(value) {
