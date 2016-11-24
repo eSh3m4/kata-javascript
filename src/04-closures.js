@@ -32,4 +32,40 @@ describe('about closures', () => {
 
         expect(item).to.equal(_);
     });
+
+    it('4-works with loops', function (done) {
+        var results = [];
+
+        function addResult(value) {
+            results.push(value);
+        }
+        for (var i = 0; i < 3; i++) {
+            setTimeout(function () {
+                addResult(i);
+            });
+        }
+
+        setTimeout(function () {
+            expect(results).to.eql(_);
+            done();
+        }, 10)
+    });
+
+    it('4-works with loops bis', function (done) {
+        var results = [];
+
+        function addResult(value) {
+            //complete the function
+          
+        }
+
+        for (var i = 0; i < 3; i++) {
+            setTimeout(addResult(i));
+        }
+
+        setTimeout(function () {
+            expect(results).to.eql([0,1,2]);
+            done();
+        }, 10)
+    });
 });

@@ -34,10 +34,10 @@ describe('about basic types', () => {
   });
 
   it('6-you should know what type of objects is', () => {
-    expect({ foo: 'bar' }).to.be.an( _ );
+    expect({ foo: 'bar' }).to.be.an( "Object" );
 
-    expect([1, 2, 3]).to.be.an( _ );
-    expect(typeof [1, 2, 3]).to.equal( _ );
+    expect([1, 2, 3]).to.be.an( "Array" );
+    expect(typeof [1, 2, 3]).to.equal( "object" );
 
     expect(/Regexp/).to.be.a( _ );
     expect(typeof /Regex/g).to.equal( _ );
