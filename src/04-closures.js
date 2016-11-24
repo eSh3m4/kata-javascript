@@ -33,7 +33,7 @@ describe('about closures', () => {
         expect(item).to.equal(_);
     });
 
-    it('4-works with loops', function (done) {
+    it('4-works with loops', (done) => {
         var results = [];
 
         function addResult(value) {
@@ -51,12 +51,12 @@ describe('about closures', () => {
         }, 10)
     });
 
-    it('5-works with loops bis', function (done) {
+    it('5-works with loops bis', (done) => {
         var results = [];
 
         function addResult(value) {
             //complete the function
-          
+
         }
 
         for (var i = 0; i < 3; i++) {
@@ -64,7 +64,7 @@ describe('about closures', () => {
         }
 
         setTimeout(function () {
-            expect(results).to.eql([0,1,2]);
+            expect(results).to.eql([0, 1, 2]);
             done();
         }, 10)
     });
