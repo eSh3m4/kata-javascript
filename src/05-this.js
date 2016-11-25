@@ -1,13 +1,13 @@
 /*
   You can find all the answers on the MDN:
-  https://developer.mozilla.org/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this
 */
 
 var chai = require('chai');
 var expect = chai.expect;
 
 describe('about this', () => {
-    it('1-is global', () => {
+    it('1-is global', function () {
         function myFunction() {
             return this;
         }

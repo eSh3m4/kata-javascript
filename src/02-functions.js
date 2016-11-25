@@ -1,9 +1,9 @@
 /*
   You can find all the answers on the MDN:
-  https://developer.mozilla.org/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript#Les_fonctions
-  https://developer.mozilla.org/docs/Web/JavaScript/Guide/Fonctions
-  https://developer.mozilla.org/docs/Web/JavaScript/Reference/Objets_globaux/Function/call
-  https://developer.mozilla.org/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript#Les_fonctions
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Guide/Fonctions
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Objets_globaux/Function/call
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply
 */
 
 var chai = require('chai');

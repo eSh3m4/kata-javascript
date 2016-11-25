@@ -1,6 +1,6 @@
 /*
   You can find all the answers on the MDN:
-  https://developer.mozilla.org/docs/Web/JavaScript/Closures
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Closures
 */
 
 var chai = require('chai');
@@ -30,7 +30,7 @@ describe('about closures', () => {
             arg.item = "item"
         })(this);
 
-        expect(item).to.equal(_);
+        expect(this.item).to.equal(_);
     });
 
     it('4-works with loops', (done) => {
@@ -55,8 +55,7 @@ describe('about closures', () => {
         var results = [];
 
         function addResult(value) {
-            //complete the function
-
+            return _
         }
 
         for (var i = 0; i < 3; i++) {

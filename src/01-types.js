@@ -1,7 +1,7 @@
 /*
   You can find all the answers on the MDN:
-  https://developer.mozilla.org/docs/Web/JavaScript/Guide/Types_et_grammaire#Types_de_données
-  https://developer.mozilla.org/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_typeof
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Guide/Types_et_grammaire#Types_de_données
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_typeof
 */
 
 var chai = require('chai');
@@ -34,10 +34,10 @@ describe('about basic types', () => {
   });
 
   it('6-you should know what type of objects is', () => {
-    expect({ foo: 'bar' }).to.be.an( "Object" );
+    expect({ foo: 'bar' }).to.be.an( _ );
 
-    expect([1, 2, 3]).to.be.an( "Array" );
-    expect(typeof [1, 2, 3]).to.equal( "object" );
+    expect([1, 2, 3]).to.be.an( _ );
+    expect(typeof [1, 2, 3]).to.equal( _ );
 
     expect(/Regexp/).to.be.a( _ );
     expect(typeof /Regex/g).to.equal( _ );

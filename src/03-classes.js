@@ -1,8 +1,8 @@
 /*
   You can find all the answers on the MDN:
-  https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes
-  https://developer.mozilla.org/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_new
-  https://developer.mozilla.org/docs/Web/JavaScript/H%C3%A9ritage_et_cha%C3%AEne_de_prototypes
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Classes
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_new
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/H%C3%A9ritage_et_cha%C3%AEne_de_prototypes
 */
 
 var chai = require('chai');

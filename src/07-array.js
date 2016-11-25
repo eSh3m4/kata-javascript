@@ -1,6 +1,6 @@
 /*
   You can find all the answers on the MDN:
-  https://developer.mozilla.org/docs/Web/JavaScript/Reference/Objets_globaux/Array
+  https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Objets_globaux/Array
 */
 
 var chai = require('chai');
