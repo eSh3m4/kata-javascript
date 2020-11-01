@@ -3,8 +3,6 @@
   https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this
 */
 
-var chai = require('chai');
-var expect = chai.expect;
 
 describe('about this', () => {
     it('1-is global', function () {
@@ -12,7 +10,7 @@ describe('about this', () => {
             return this;
         }
 
-        expect(myFunction()).to.equal(_);
+        expect(myFunction()).toBe( _ );
     });
 
     it('2-is in strict mode', () => {
@@ -21,7 +19,7 @@ describe('about this', () => {
             return this;
         }
 
-        expect(myFunction()).to.equal(_);
+        expect(myFunction()).toBe( _ );
     });
 
     it('3-function context', () => {
@@ -32,7 +30,7 @@ describe('about this', () => {
 
         myFunction();
 
-        expect(this.value).to.equal(_);
+        expect(this.value).toBe( _ );
     });
 
     it('4-object context', () => {
@@ -42,7 +40,7 @@ describe('about this', () => {
 
         var myObject = new myClass();
 
-        expect(myObject.value).to.equal(_);
+        expect(myObject.value).toBe( _ );
     });
 
     it('5-current context', () => {
@@ -53,8 +51,8 @@ describe('about this', () => {
 
         var myObject = new myClass();
 
-        expect(myObject.value).to.equal(_);
-        expect(this.value).to.equal(_);
+        expect(myObject.value).toBe( _ );
+        expect(this.value).toBe( _ );
     });
 
     it('6-function context', () => {
@@ -69,8 +67,8 @@ describe('about this', () => {
         var myObject = new myClass();
         myObject.setValue();
 
-        expect(myObject.value).to.equal(_);
-        expect(this.value).to.equal(_);
+        expect(myObject.value).toBe( _ );
+        expect(this.value).toBe( _ );
     });
 
     it('7-timeout context', () => {
@@ -85,8 +83,8 @@ describe('about this', () => {
         var myObject = new myClass();
         setTimeout(function () { myObject.setValue(); });
 
-        expect(myObject.value).to.equal(_);
-        expect(this.value).to.equal(_);
+        expect(myObject.value).toBe( _ );
+        expect(this.value).toBe( _ );
     });
 
     it('8-bind context', () => {
@@ -101,8 +99,8 @@ describe('about this', () => {
         var myObject = new myClass();
         myObject.setValue.bind(this)();
 
-        expect(myObject.value).to.equal(_);
-        expect(this.value).to.equal(_);
+        expect(myObject.value).toBe( _ );
+        expect(this.value).toBe( _ );
     });
 
     it('9-invoke function with context', () => {
@@ -122,8 +120,8 @@ describe('about this', () => {
         myObject1.setValue.apply(this, ["d", "e"]);
         myObject2.setValue.call(myObject1, "f");
 
-        expect(this.value).to.equal(_);
-        expect(myObject1.value).to.equal(_);
-        expect(myObject2.value).to.equal(_);
+        expect(this.value).toBe( _ );
+        expect(myObject1.value).toBe( _ );
+        expect(myObject2.value).toBe( _ );
     });
 });

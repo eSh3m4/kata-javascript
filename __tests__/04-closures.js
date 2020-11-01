@@ -3,8 +3,6 @@
   https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Closures
 */
 
-var chai = require('chai');
-var expect = chai.expect;
 
 describe('about closures', () => {
     it('1-inner variable scope', () => {
@@ -13,7 +11,7 @@ describe('about closures', () => {
             var a = "b";
         })();
 
-        expect(a).to.equal(_);
+        expect(a).toBe( _ );
     });
 
     it('2-outer variable scope', () => {
@@ -22,7 +20,7 @@ describe('about closures', () => {
             a = "b";
         })();
 
-        expect(a).to.equal(_);
+        expect(a).toBe( _ );
     });
 
     it('3-closures are functions', () => {
@@ -30,7 +28,7 @@ describe('about closures', () => {
             arg.item = "item"
         })(this);
 
-        expect(this.item).to.equal(_);
+        expect(this.item).toBe( _ );
     });
 
     it('4-works with loops', (done) => {
@@ -46,7 +44,7 @@ describe('about closures', () => {
         }
 
         setTimeout(function () {
-            expect(results).to.eql(_);
+            expect(results).toEqual( _ );
             done();
         }, 10)
     });
@@ -55,7 +53,7 @@ describe('about closures', () => {
         var results = [];
 
         function addResult(value) {
-            return _
+            return _ ;
         }
 
         for (var i = 0; i < 3; i++) {
@@ -63,7 +61,7 @@ describe('about closures', () => {
         }
 
         setTimeout(function () {
-            expect(results).to.eql([0, 1, 2]);
+            expect(results).toEqual([0, 1, 2]);
             done();
         }, 10)
     });

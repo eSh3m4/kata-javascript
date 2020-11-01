@@ -5,15 +5,13 @@
   https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/H%C3%A9ritage_et_cha%C3%AEne_de_prototypes
 */
 
-var chai = require('chai');
-var expect = chai.expect;
 
 describe('about classes', () => {
   it('1-can create an object', () => {
     function myClass() {
       /// complete here
     }
-    expect(new myClass().a).to.equal("a");
+    expect(new myClass().a).toBe("a");
   });
   
   it('2-can contain function', () => {
@@ -21,7 +19,7 @@ describe('about classes', () => {
       var a = "a";
       /// complete here
     }
-    expect(new myClass().getA()).to.equal("a");
+    expect(new myClass().getA()).toBe("a");
   });
 
   it('3-can be inherited', () => {
@@ -35,8 +33,8 @@ describe('about classes', () => {
       this.a = "a";
     }
 
-    myClass.prototype = _;
+    myClass.prototype = _ ;
     
-    expect(new myClass().getA()).to.equal("a");
+    expect(new myClass().getA()).toBe("a");
   });
 });

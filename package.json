@@ -1,26 +1,21 @@
 {
   "name": "kata-javascript",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
-    "test": "mocha src",
-    "test:types": "mocha src/01*.js",
-    "test:functions": "mocha src/02*.js",
-    "test:classes": "mocha src/03*.js",
-    "test:closures": "mocha src/04*.js",
-    "test:this": "mocha src/05*.js",
-    "test:string": "mocha src/06*.js",
-    "test:array": "mocha src/07*.js"
+    "test": "jest",
+    "test:types": "jest __tests__/01*.js --watchAll",
+    "test:functions": "jest __tests__/02*.js --watchAll",
+    "test:classes": "jest __tests__/03*.js --watchAll",
+    "test:closures": "jest __tests__/04*.js --watchAll",
+    "test:this": "jest __tests__/05*.js --watchAll",
+    "test:string": "jest __tests__/06*.js --watchAll",
+    "test:array": "jest __tests__/07*.js --watchAll",
+    "watch": "jest --watchAll"
   },
   "keywords": [],
   "author": "darkein",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^3.1.0"
-  },
-  "dependencies": {
-    "@types/chai": "^3.4.34",
-    "@types/mocha": "^2.2.32",
-    "@types/node": "^6.0.41",
-    "chai": "^3.5.0"
+    "jest": "^26.6.1"
   }
 }
