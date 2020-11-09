@@ -10,6 +10,7 @@
     "test:this": "jest __tests__/05*.js --watchAll",
     "test:string": "jest __tests__/06*.js --watchAll",
     "test:array": "jest __tests__/07*.js --watchAll",
+    "test:promise": "jest __tests__/08*.js --watchAll",
     "watch": "jest --watchAll"
   },
   "keywords": [],

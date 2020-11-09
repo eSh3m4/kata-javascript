@@ -5,6 +5,7 @@
   https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/H%C3%A9ritage_et_cha%C3%AEne_de_prototypes
 */
 
+'use strict';
 describe('about classes', () => {
   describe('about classes as functions', () => {
     it('1-can create an object', () => {
@@ -16,7 +17,7 @@ describe('about classes', () => {
 
     it('2-can contain function', () => {
       function myClass() {
-        var a = "a";
+        let a = "a";
         /// complete here
       }
       expect(new myClass().getA()).toBe("a");

@@ -4,7 +4,7 @@
   https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_typeof
 */
 
-
+'use strict';
 describe('about basic types', () => {
   it('1-you should know what type of booleans is', () => {
     expect(typeof true).toBe( _ );

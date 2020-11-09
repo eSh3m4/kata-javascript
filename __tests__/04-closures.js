@@ -3,19 +3,19 @@
   https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Closures
 */
 
-
+'use strict';
 describe('about closures', () => {
     it('1-inner variable scope', () => {
-        var a = "a";
+        let a = "a";
         (function () {
-            var a = "b";
+            let a = "b";
         })();
 
         expect(a).toBe( _ );
     });
 
     it('2-outer variable scope', () => {
-        var a = "a";
+        let a = "a";
         (function () {
             a = "b";
         })();
@@ -32,12 +32,12 @@ describe('about closures', () => {
     });
 
     it('4-works with loops', (done) => {
-        var results = [];
+        let results = [];
 
         function addResult(value) {
             results.push(value);
         }
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 3; i++) {///Do not remove the "var"
             setTimeout(function () {
                 addResult(i);
             });
@@ -50,13 +50,13 @@ describe('about closures', () => {
     });
 
     it('5-works with loops bis', (done) => {
-        var results = [];
+        let results = [];
 
         function addResult(value) {
             return _ ;
         }
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 3; i++) {///Do not remove the "var"
             setTimeout(addResult(i));
         }
 

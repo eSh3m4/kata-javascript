@@ -6,7 +6,7 @@
   https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply
 */
 
-
+'use strict';
 describe('about functions', () => {
   it('1-return a value', () => {
     function helloWorld() {
@@ -51,13 +51,13 @@ describe('about functions', () => {
   });
 
   it('7-can be created using Function', () => {
-    var myFunction = new Function( _ , _ );
+    let myFunction = new Function( _ , _ );
 
     expect(myFunction("hello world")).toBe("hello world");
   });
 
   it('8-can be self-created', () => {
-    var a = "";
+    let a = "";
     /// modify this function to be self-called
     function helloWorld(dontUseThisArg) {
       a = "a";
@@ -71,7 +71,7 @@ describe('about functions', () => {
       return arg;
     }
 
-    var result = helloWorld.call( _ , _)
+    let result = helloWorld.call( _ , _)
 
     expect(result).toBe("a");
   });
@@ -81,7 +81,7 @@ describe('about functions', () => {
       return arg1 + arg2;
     }
 
-    var result = helloWorld.apply( _ , _ )
+    let result = helloWorld.apply( _ , _ )
 
     expect(result).toBe("hello world");
   });
